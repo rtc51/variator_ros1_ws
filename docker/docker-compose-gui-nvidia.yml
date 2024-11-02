@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  variator_gui_nvidia:
+    extends:
+      file: docker-compose-gui.yml
+      service: variator_gui
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=all
+    runtime: nvidia

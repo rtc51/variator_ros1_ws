@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  variator:
+    extends:
+      file: docker-compose.yml
+      service: variator_nvidia
+    environment:
+     - NVIDIA_VISIBLE_DEVICES=all
+    runtime: nvidia

@@ -1,0 +1,3 @@
+[submodule "src/variator_ros1_driver"]
+	path = src/variator_ros1_driver
+	url = https://github.com/rtc51/variator_ros1_driver

@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  variator_dev:
+    extends:
+      file: docker-compose-vscode.yml
+      service: variator_gui_vscode
+    volumes:
+      - ../.vscode:${CATKIN_WORKSPACE_DIR}/.vscode
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      target: dev
+      args:
+        - CATKIN_WORKSPACE_DIR=${CATKIN_WORKSPACE_DIR}
+        - USERNAME=${USERNAME:-developer}
+        - UID=${UID:-1000}
+        - GID=${UID:-1000}

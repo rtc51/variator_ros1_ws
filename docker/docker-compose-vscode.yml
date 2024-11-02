@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  variator_gui_vscode:
+    extends:
+      file: docker-compose-gui.yml
+      service: variator_gui
+    volumes:
+      - ../.vscode:${CATKIN_WORKSPACE_DIR}/.vscode
+
