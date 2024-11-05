@@ -1,0 +1,9 @@
+{
+  "name": "ROS Docker",
+  "dockerComposeFile": [
+    "../docker/docker-compose-vscode.yml" // Alternatives: "../docker/docker-compose-gui.yml", "../docker/docker-compose-gui-nvidia.yml", "../docker/docker-compose-nvidia.yml"
+  ],
+  "service": "variator_gui_vscode",
+  "workspaceFolder": "/home/variator/catkin_ws",
+  "shutdownAction": "stopCompose"
+}
